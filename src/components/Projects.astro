@@ -1,0 +1,103 @@
+---
+import NextJS from "./icon/NextJS.astro";
+import TailwindIcon from "./icon/TailwindIcon.astro";
+import AstroIcon from "./icon/AstroIcon.astro";
+import ReactJS from "./icon/ReactJS.astro";
+import Githubicon from "./icon/Githubicon.astro";
+
+const TAGS = {
+  NEXT: {
+    name: "Next.js",
+    class: "bg-black text-white",
+    icon: NextJS,
+  },
+
+  TAILWIND: {
+    name: "Tailwind",
+    class: "bg-white text-[#0891b2]",
+    icon: TailwindIcon,
+  },
+
+  ASTRO: {
+    name: "Astro",
+    class: "bg-[#fb923c] text-white",
+    icon: AstroIcon,
+  },
+
+  REACT: {
+    name: "React",
+    class: "bg-white text-[#06b6d4]",
+    icon: ReactJS,
+  },
+};
+
+const PROJECTS = [
+  {
+    title: "project 1",
+    description:
+      "get acces to over 20* pages including a dashboard layout, charts, kanban board, calendar, and pro-order E-comerce & marketing pages",
+    link: "#",
+    github: "#",
+    image: "https://picsum.photos/700/400?random",
+    tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.ASTRO, TAGS.REACT],
+  },
+
+  {
+    title: "project 2",
+    description:
+      "get acces to over 20* pages including a dashboard layout, charts, kanban board, calendar, and pro-order E-comerce & marketing pages",
+    link: "#",
+    github: "www.youtube.com",
+    image: "https://picsum.photos/700/400?random",
+    tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.REACT],
+  },
+
+  {
+    title: "project 3",
+    description:
+      "get acces to over 20* pages including a dashboard layout, charts, kanban board, calendar, and pro-order E-comerce & marketing pages",
+    link: "#",
+    github: "#",
+    image: "https://picsum.photos/700/400?random",
+    tags: [TAGS.NEXT, TAGS.TAILWIND],
+  },
+
+  {
+    title: "project 4",
+    description:
+      "get acces to over 20* pages including a dashboard layout, charts, kanban board, calendar, and pro-order E-comerce & marketing pages",
+    link: "#",
+    github: "#",
+    image: "https://picsum.photos/700/400?random",
+    tags: [TAGS.NEXT, TAGS.TAILWIND],
+  },
+];
+---
+
+{
+  PROJECTS.map(({ title, description, link, github, image, tags }) => (
+    <article class="size-[370px] border-title text-white rounded-md shadow-lg flex flex-col items-center justify-center cardStyle">
+      <img class="w-full h-full rounded-top-md shadow-md" src={image} alt={title} />
+      <div class="p-2 ">
+        <span class="flex justify-between items-center hover:text-[#64ffda]">
+          <h3 class="text-2xl font-bold text-title mb-2 mt-2">{title}</h3>
+          <Githubicon class="size-6 cursor-pointer" />
+        </span>
+
+        <p class="text-gray-300 mb-4">{description}</p>
+        <ul class="flex flex-row gap-x-4">
+          {tags.map((tag) => (
+            <li>
+              <span
+                class={`flex gap-x-2 rounded-full text-xs py-1 px-2 ${tag.class}`}
+              >
+                <tag.icon class="size-5" />
+                {tag.name}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </article>
+  ))
+}

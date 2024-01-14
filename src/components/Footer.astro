@@ -1,0 +1,25 @@
+---
+import SocialPill from "./SocialPill.astro";
+import Instagram from "./icon/Instagram.astro";
+import Twitter from "./icon/Twitter.astro";
+---
+
+<footer class="py-10 flex items-center justify-center flex-col">
+  <h1 class="hover:text-[#64ffda] text-xl">
+    <a href="https://github.com/cesar097" class="flex items-center justify-center"
+      >Designed & Built by CesarDev</a
+    >
+  </h1>
+
+  <div class="flex items-center justify-center gap-x-4 mt-4">
+    <SocialPill href="https://www.instagram.com/cesar_osag/">
+      <Instagram class="size-4 md:size-6" />
+      Instagram
+    </SocialPill>
+
+    <SocialPill href="https://twitter.com/cesar_osag">
+      <Twitter class="size-4 md:size-6" />
+      X
+    </SocialPill>
+  </div>
+</footer>

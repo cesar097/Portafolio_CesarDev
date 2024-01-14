@@ -1,51 +1,115 @@
 ---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Header2 from "../components/Header2.astro";
+import Header4 from "../components/Header4.astro";
+import Header5 from "../components/Header5.astro";
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+ 
+  
+    <title>CesarDev</title>
+  </head>
+  <body class="px-5">
+    <Header />
+    <slot />
+    <Footer />
+   
+  </body>
+
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
+
+
+
+  #check:checked ~ul {
+    left: 0;
+    position: absolute;
+  }
+  :root {
+    color-scheme: light dark;
+  }
+  html {
+    background: #0a192f;
+    font-family: monospace;
+    scroll-behavior: smooth;
+  }
+
+
+
+  body {
+    background: #0a192f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  .boton {
+    background-color: #0a192f;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: 1px solid #64ffda;
+    border-radius: 4px;
+    transition:
+      transform 0.2s ease-in-out,
+      box-shadow 0.2s ease-in-out;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  .boton:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 2px 2px 2px #64ffda;
+    margin-right: 12px;
+    margin-bottom: 12px;
+  }
+
+  .boton:hover::before {
+    transform: translateY(0%);
+  }
+
+  .cardStyle {
+    background-color: #0a192f;
+    color: #ffffff;
+    border: 1px solid #64ffda;
+    border-radius: 4px;
+    transition:
+      transform 0.2s ease-in-out,
+      box-shadow 0.2s ease-in-out;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  .cardStyle:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 2px 2px 2px #64ffda;
+    margin-right: 14px;
+    margin-bottom: 1px;
+  }
+
+  .cardStyle:hover::before {
+    transform: translateY(0%);
+  }
+
+  @media (prefers-reduce-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
 </style>
