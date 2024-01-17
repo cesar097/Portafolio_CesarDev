@@ -1,0 +1,113 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<header>
+    <nav
+        class="nav relative flex justify-end md:justify-between items-center w-full md:max-w-6xl text-xl"
+        id="nav"
+    >
+        <div
+            class="nav__menu fixed md:static -top-[100%] md:top-0 left-0 bg-[#0a192f] w-full shadow-xl md:shadow-none py-20 md:py-8 px-16 md:px-0 transition-all duration-500 ease-in-out show-menu z-50"
+            id="nav-menu"
+        >
+            <ul
+                class="nav__list flex flex-col md:flex-row items-center justify-between gap-10 text-center"
+            >
+                <li class="nav__item">
+                    <a
+                        href="#top"
+                        class="nav__link relative text-white transition-all duration-300 hover:text-[#64ffda] md:hover:translate-y-[-2px]"
+                    >
+                        <span class="text-[#64ffda]">01.</span> Inicio
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a
+                        href="#experiencia"
+                        class="nav__link relative text-white transition-all duration-300 hover:text-[#64ffda] hover:md:translate-y-[-2px]"
+                    >
+                        <span class="text-[#64ffda]">02.</span> Experiencia
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a
+                        href="#proyectos"
+                        class="nav__link text-white transition-all duration-300 hover:text-[#64ffda] hover:translate-y-[-2px]"
+                    >
+                        <span class="text-[#64ffda]">03.</span> Proyectos
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a
+                        href="#sobre-mi"
+                        class="nav__link text-white transition-all duration-300 hover:text-[#64ffda] hover:translate-y-[-2px]"
+                    >
+                        <span class="text-[#64ffda]">04.</span> Sobre mi
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a
+                        href="#contacto"
+                        class="nav__link text-white transition-all duration-300 hover:text-[#64ffda] hover:translate-y-[-2px]"
+                    >
+                        <span class="text-[#64ffda]">05.</span> Contacto
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Close button -->
+            <div
+                class="nav__close inline-flex md:hidden text-xl cursor-pointer text-white absolute top-8 right-8"
+                id="nav-close"
+            >
+                <Icon name="mdi:close" class="size-8" />
+            </div>
+        </div>
+
+        <!-- Toggle button -->
+        <div
+            class="nav__toggle fixed md:hidden text-xl cursor-pointer text-white transition duration-300 ease-in-out top-8 right-8"
+            id="nav-toggle"
+        >
+            <Icon name="mdi:menu" class="size-8" />
+        </div>
+    </nav>
+</header>
+
+<script>
+    /* ======== SHOW MENU ======== */
+    const navMenu = document.getElementById("nav-menu"),
+        navToggle = document.getElementById("nav-toggle"),
+        navClose = document.getElementById("nav-close");
+
+    /* ======== MENU SHOW ======== */
+    /* Validate if constant exits */
+    if (navToggle) {
+        navToggle.addEventListener("click", () => {
+            navMenu?.classList.remove("-top-[100%]");
+            navMenu?.classList.add("top-0");
+            navToggle.classList.add("hidden");
+        });
+    }
+
+    /* ======== MENU HIDDEN ======== */
+    if (navClose) {
+        navClose.addEventListener("click", () => {
+            navMenu?.classList.remove("top-0");
+            navMenu?.classList.add("-top-[100%]");
+            navToggle?.classList.remove("hidden");
+        });
+    }
+
+    /* ======== CLOSE MENU ON LINK CLICK ======== */
+    const navLinks = document.querySelectorAll(".nav__link");
+
+    navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+            navMenu?.classList.remove("top-0");
+            navMenu?.classList.add("-top-[100%]");
+            navToggle?.classList.remove("hidden");
+        });
+    });
+</script>

@@ -12,7 +12,7 @@ import CodeIcon from "../components/icon/CodeIcon.astro";
 import Projects from "../components/Projects.astro";
 import UserIcon from "../components/icon/UserIcon.astro";
 import AboutMe from "../components/AboutMe.astro";
-import Contact from "../components/Contact.astro";
+import Contact2 from "../components/Contact2.astro";
 ---
 
 <Layout title="Portafolio Cesar Ospino - desarrollador y Programador web">
@@ -24,23 +24,26 @@ import Contact from "../components/Contact.astro";
         alt="CesarDev"
       />
 
-      <div class="flex">
-        <h1
-          class="text-white text-2xl md:text-4xl lg:text-5xl font-bold flex items-center justify-center flex-row gap-x-4 pb-6 lg:pb-6"
-        >
-          Hola, soy <span class="text-[#64ffda] font-bold">Cesar Opsino</span>
-          <a
-            href="https://www.linkedin.com/in/cesar-arturo-ospino-agamez-302586170/"
-            ><Badge>Disponible para trabajar</Badge></a
+      <div class="max-w-[800px] mx-auto">
+        <div class="flex flex-col lg:flex-row lg:items-center">
+          <h1
+            class="text-white text-2xl md:text-4xl lg:text-5xl font-bold flex items-center justify-center lg:justify-start flex-row gap-x-2 pb-2 lg:pb-0"
           >
-        </h1>
+            Hola, soy <span class="text-[#64ffda] font-bold">CesarDev</span>
+          </h1>
+          <a
+            href="https://www.linkedin.com/in/cesar-arturo-ospino-agamez/"
+            class="text-[#64ffda] text-sm lg:text-base flex items-center justify-center lg:justify-start"
+          >
+            <Badge>Disponible para trabajar</Badge>
+          </a>
+        </div>
+        <h2 class="text-xl lg:text-2xl opacity-80">
+          Un apasionado desarrollador frontend de Colombia &#x1F1E8;&#x1F1F4;. Me especializo en la
+          creación de experiencias de usuario excepcionales al fusionar diseño y
+          funcionalidad.
+        </h2>
       </div>
-      <h2 class="text-xl lg:text-2xl opacity-80 max-w-[700px]">
-        Un apasionado desarrollador frontend de colombia. Me especializo en la
-        creación de experiencias de usuario excepcionales al fusionar diseño y
-        funcionalidad. Mi enfoque se centra en ofrecer soluciones innovadoras y
-        atractivas para interfaces web.
-      </h2>
 
       <nav class="flex gap-4 mt-4 flex-wrap">
         <SocialPill
@@ -59,7 +62,6 @@ import Contact from "../components/Contact.astro";
           <Mail class="size-4 md:size-6" />
           cospino097@gmail.com
         </SocialPill>
-
       </nav>
     </SectionContainer>
 
@@ -80,13 +82,13 @@ import Contact from "../components/Contact.astro";
         <CodeIcon />
         Proyectos
       </h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8"
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8"
       >
         <Projects />
       </div>
     </SectionContainer>
 
-    
     <SectionContainer id="sobre-mi" class="lg:w-[800px] w-full">
       <h2
         class="text-4xl font-semibold mb-10 flex gap-x-2 items-center text-[#64ffda]"
@@ -95,7 +97,7 @@ import Contact from "../components/Contact.astro";
         Sobre mi
       </h2>
 
-      <AboutMe/>
+      <AboutMe />
     </SectionContainer>
 
     <SectionContainer id="contacto">
@@ -105,9 +107,10 @@ import Contact from "../components/Contact.astro";
         <Mail class="text-[#64ffda]" />
         Contactame
       </h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8"
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8"
       >
-        <Contact />
+        <Contact2 />
       </div>
     </SectionContainer>
   </main>

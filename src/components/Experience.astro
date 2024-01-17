@@ -3,32 +3,23 @@ import ExperienceItem from "./ExperienceItem.astro";
 
 export const EXPERINECE = [
   {
-    date: "january",
+    date: "january 2024",
     title: "portafolio CesarDev",
-    description: "mi portafio como desarrollador frontEnd",
-    link: "#",
+    description:
+      "creado principalmente con Astro, Tailwind y JavaScript. Explora mi trabajo y descubre cómo estas herramientas transforman la experiencia web.",
+    link: "https://github.com/cesar097/portafolio",
   },
 
-  {
-    date: "February",
-    title: "Aplication UI code whith Tailwind CSS",
-    description:
-      "get acces to over 20* pages including a dashboard layout, charts, kanban board, calendar, and pro-order E-comerce & marketing pages",
-    link: "#",
-  },
+
 ];
 ---
 
 <ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3">
-
-    {
-        EXPERINECE.map(experience => (
-        <li class="mb-10 ms-4">
-            <ExperienceItem {...experience} />
-        </li>
-        ))
-    }
-
-    
- 
+  {
+    EXPERINECE.map((experience) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
 </ol>

@@ -12,125 +12,130 @@ import FitmaIcon from "./icon/FigmaIcon.astro";
 import AdobeIcon from "./icon/AdobeIcon.astro";
 import LiContainer from "./LiContainer.astro";
 import HobbiesIcon from "./icon/HobbiesIcon.astro";
-import SoccerIcon from "./icon/SoccerIcon.astro"
-import GymIcon from "./icon/GymIcon.astro"
-import GameIcon from "./icon/GameIcon.astro"
-import BookIcon from "./icon/BookIcon.astro"
+import SoccerIcon from "./icon/SoccerIcon.astro";
+import GymIcon from "./icon/GymIcon.astro";
+import GameIcon from "./icon/GameIcon.astro";
+import BookIcon from "./icon/BookIcon.astro";
 import CodeIcon from "./icon/CodeIcon.astro";
-import TravelIcon from "./icon/TravelIcon.astro"
+import TravelIcon from "./icon/TravelIcon.astro";
 ---
 
-<div class="max-w-3xl mx-auto">
-  <div class="flex space-y-8">
-    <div class="flex flex-col justify-between">
-      <h2 class="text-3xl font-bold mb-6">¿Qué es Lorem Ipsum?</h2>
-      <p class="text-lg mb-4 text-pretty p-6 opacity-80">
-        El trozo de texto estándar de Lorem Ipsum usado desde el año 1500 es
-        reproducido debajo para aquellos interesados. Las secciones 1.10.32 y
-        1.10.33 de "de Finibus Bonorum et Malorum" por Cicero son también
-        reproducidas en su forma original exacta, acompañadas por versiones en
-        Inglés de la traducción realizada en 1914 por H. Rackham.
-      </p>
-    </div>
+<div
+  class="max-w-3xl mx-auto grid md:grid-cols-2 md:items-center md:gap-4 gap-8 items-center justify-center"
+>
+  <div class="">
+    <h2 class="text-3xl font-bold mb-6">¿Quien soy?</h2>
+    <p class="text-lg mb-4 text-pretty p-6 opacity-80">
+      ¡Hola! Soy Cesar Ospino Agamez, un apasionado desarrollador frontend con
+      experiencia en diversas tecnologías. Me enfoco en crear soluciones
+      creativas y funcionales desde cero. Amante del deporte, siempre busco
+      aprender nuevas habilidades y me sumerjo en la música para alimentar mi
+      creatividad. Listo para enfrentar nuevos desafíos y evolucionar
+      constantemente como desarrollador y como individuo creativo.
+    </p>
+  </div>
 
+  <div class="flex items-center justify-center">
     <img
-      class="cardStyle size-[230px] transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0"
+      class="cardStyle size-[230px] md:mt-[-10px] transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0 order-2 md:order-1 md:right-4 sm:mx-auto sm:text-center"
       src="https://i.ibb.co/tp1jFS3/image.png"
       alt="me"
     />
   </div>
+</div>
 
-  <div class="flex flex-col lg:items-start sm:items-center mt-4 ">
-    <h2 class="flex text-2xl text-[#64ffda] gap-x-2">
-      <TechIcon class="size-8" />
-      Tecnologias
-    </h2>
-  </div>
+<div class="flex flex-col lg:items-start sm:items-center mt-4">
+  <h2 class="flex text-2xl text-[#64ffda] gap-x-2">
+    <TechIcon class="size-8" />
+    Tecnologias
+  </h2>
+</div>
 
+<div class="m-8 flex items-center justify-center">
+  <ul class="grid grid-cols-5 lg:flex gap-6">
+    <LiContainer>
+      <HtmlIcon class="size-10" />
+    </LiContainer>
 
-  <div class="m-8 flex items-center justify-center">
-    <ul class="grid grid-cols-5 lg:flex gap-6">
-      <LiContainer>
-        <HtmlIcon class="size-10" />
-      </LiContainer>
+    <LiContainer>
+      <CssIcon class="size-10" />
+    </LiContainer>
 
-      <LiContainer>
-        <CssIcon class="size-10" />
-      </LiContainer>
+    <LiContainer>
+      <JavascriptIcon class="size-10" />
+    </LiContainer>
 
-      <LiContainer>
-        <JavascriptIcon class="size-10" />
-      </LiContainer>
+    <LiContainer>
+      <ReactJS class="size-10" />
+    </LiContainer>
 
-      <LiContainer>
-        <ReactJS class="size-10" />
-      </LiContainer>
+    <LiContainer>
+      <AstroIcon class="size-10" />
+    </LiContainer>
 
-      <LiContainer>
-        <AstroIcon class="size-10" />
-      </LiContainer>
+    <LiContainer>
+      <TailwindIcon class="size-10" />
+    </LiContainer>
 
-      <LiContainer>
-        <TailwindIcon class="size-10" />
-      </LiContainer>
+    <LiContainer>
+      <BootstrapIcon class="size-10" />
+    </LiContainer>
 
-      <LiContainer>
-        <BootstrapIcon class="size-10" />
-      </LiContainer>
+    <LiContainer>
+      <GitIcon class="size-10" />
+    </LiContainer>
 
-      <LiContainer>
-        <GitIcon class="size-10" />
-      </LiContainer>
+    <LiContainer>
+      <FitmaIcon class="size-10" />
+    </LiContainer>
 
-      <LiContainer>
-        <FitmaIcon class="size-10" />
-      </LiContainer>
+    <LiContainer>
+      <AdobeIcon class="size-10" />
+    </LiContainer>
+  </ul>
+</div>
 
-      <LiContainer>
-        <AdobeIcon class="size-10" />
-      </LiContainer>
-      <!-- Agrega más habilidades según sea necesario -->
-    </ul>
-  </div>
+<div
+  class="flex flex-col lg:items-start sm:items-center sm:size-6 sm:mt-2 sm:mb-4 mt-4 mb-8"
+>
+  <h2 class="flex text-lg sm:text-2xl text-[#64ffda] gap-x-2">
+    <HobbiesIcon class="size-8" />
+    Hobbies
+  </h2>
+</div>
 
-  <div class="flex flex-col lg:items-start sm:items-center mt-4 mb-8">
-    <h2 class="flex text-2xl text-[#64ffda] gap-x-2">
-      <HobbiesIcon class="size-8" />
-      Hobbies
-    </h2>
-  </div>
+<div class="m-8 flex items-center justify-center">
+  <ul
+    class="grid lg:grid-cols-3 sm:grid-cols-2 gap-4 sm:gap-2 lg:gap-8 opacity-80"
+  >
+    <LiContainer class="hover:text-[#64ffda]">
+      <SoccerIcon class="size-8 sm:size-10" />
+      <h2 class="text-lg sm:text-2xl">Fútbol</h2>
+    </LiContainer>
 
-  <div class="m-8 flex items-center justify-center">
-    <ul class="grid lg:grid-cols-3 sm:grid-cols-2 gap-[40px]  opacity-80  ">
-      <LiContainer class="hover:text-[#64ffda]">
-        <SoccerIcon class="size-10" />
-        <h2 class="text-2xl">Fútbol</h2>
-      </LiContainer>
+    <LiContainer>
+      <GymIcon class="size-8 sm:size-10" />
+      <h2 class="text-lg sm:text-2xl">Gimnasio</h2>
+    </LiContainer>
 
-      <LiContainer>
-        <GymIcon class="size-10" />
-        <h2 class="text-2xl">Gimnasio</h2>
-      </LiContainer>
+    <LiContainer>
+      <GameIcon class="size-8 sm:size-6" />
+      <h2 class="text-lg sm:text-2xl">Videojuegos</h2>
+    </LiContainer>
 
-      <LiContainer>
-        <GameIcon class="size-10" />
-        <h2 class="text-2xl">Videojuegos</h2>
-      </LiContainer>
+    <LiContainer>
+      <BookIcon class="size-8 sm:size-10" />
+      <h2 class="text-lg sm:text-2xl">Lectura</h2>
+    </LiContainer>
 
-      <LiContainer>
-        <BookIcon class="size-10" />
-        <h2 class="text-2xl">lectura</h2>
-      </LiContainer>
+    <LiContainer>
+      <CodeIcon class="size-8 sm:size-10" />
+      <h2 class="text-lg sm:text-2xl">Programación</h2>
+    </LiContainer>
 
-      <LiContainer>
-        <CodeIcon class="size-10" />
-        <h2 class="text-2xl">Programación</h2>
-      </LiContainer>
-
-      <LiContainer>
-        <TravelIcon class="size-10" />
-        <h2 class="text-2xl">Viajar</h2>
-      </LiContainer>
-    </ul>
-  </div>
+    <LiContainer>
+      <TravelIcon class="size-8 sm:size-10" />
+      <h2 class="text-lg sm:text-2xl">Viajar</h2>
+    </LiContainer>
+  </ul>
 </div>
