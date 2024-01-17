@@ -98,7 +98,7 @@ const PROJECTS = [
 
 {
 PROJECTS.map(({ title, description, link, github, image, tags }) => (
-    <article class="size-[370px] border-title text-white rounded-md shadow-lg flex flex-col items-center justify-center ml-6 cardStyle">
+    <article class="size-[370px] border-title text-white rounded-md shadow-lg flex flex-col items-center justify-center gl:ml-6 mr-6 cardStyle">
       <img class="w-full h-full rounded-top-md shadow-md" src={image} alt={title} />
       <div class="p-2 ">
         <span class="flex justify-between items-center hover:text-[#64ffda]">
@@ -111,7 +111,7 @@ PROJECTS.map(({ title, description, link, github, image, tags }) => (
         <p class="text-gray-300 mb-4">{description}</p>
         <ul class="flex flex-row gap-x-4">
           {tags.map((tag) => (
-            <li key={tag.name}>
+            <li >
               <span
                 class={`flex gap-x-2 rounded-full text-xs py-1 px-2 ${tag.class}`}
               >
