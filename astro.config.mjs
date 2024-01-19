@@ -8,5 +8,5 @@ import icon from "astro-icon";
 export default defineConfig({
   integrations: [tailwind(), react(), icon()],
   site: 'https://astronaut.github.io',
-  base: '/mi-repo',
+  base: '/index.astro',
 });
