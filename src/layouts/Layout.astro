@@ -11,12 +11,12 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang="es" >
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon"  href="https://ibb.co/YRQXfZ0" />
+    <link rel="icon"  href="/public/img/c-logo.png" />
     <meta name="generator" content={Astro.generator} />
 
   <script src="https://kit.fontawesome.com/d4fea1bc27.js" crossorigin="anonymous"></script>
@@ -112,6 +112,7 @@ const { title } = Astro.props;
   .cardStyle:hover::before {
     transform: translateY(0%);
   }
+  
 
   @media (prefers-reduce-motion: reduce) {
     html {
