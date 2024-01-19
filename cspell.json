@@ -3,7 +3,10 @@
     "ignorePaths": [],
     "dictionaryDefinitions": [],
     "dictionaries": [],
-    "words": [],
+    "words": [
+        "astro",
+        "astrojs"
+    ],
     "ignoreWords": [],
     "import": []
 }
