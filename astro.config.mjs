@@ -9,7 +9,7 @@ export default defineConfig({
   integrations: [tailwind(), icon()],
   output: "server",
   adapter: vercel(),
-  out: "public",
+  
 });
 
 
