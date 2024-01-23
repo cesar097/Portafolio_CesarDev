@@ -7,6 +7,7 @@ import Githubicon from "./icon/Githubicon.astro";
 import JavascriptIcon from "./icon/JavascriptIcon.astro";
 import CssIcon from "./icon/CssIcon.astro";
 import HtmlIcon from "./icon/HtmlIcon.astro";
+import VisualIcon from "./icon/VisualIcon.astro";
 
 
 const TAGS = {
@@ -55,20 +56,20 @@ const TAGS = {
 
 const PROJECTS = [
   {
-    title: "E-commerce fake store",
+    title: "Github Search Profile",
     description:
-      "get acces to over 20* pages including a dashboard layout, charts, kanban board, calendar, and pro-order E-comerce & marketing pages",
-    link: "#",
-    github: "#",
-    image: "./img/ecomerce.png",
-    tags: [TAGS.HTML, TAGS.TAILWIND, TAGS.REACT],
+      "buscador de perfiles de github hecho con html css y javascript.",
+    link: "https://github-search-nu-black.vercel.app/",
+    github: "https://github.com/cesar097/github_search",
+    image: "./src/components/img/githubsearch.png",
+    tags: [TAGS.HTML, TAGS.TAILWIND, TAGS.JAVASCRIPT],
   },
 
   {
     title: "React-taks-app",
     description:
-      "get acces to over 20* pages including a dashboard layout, charts, kanban board, calendar, and pro-order E-comerce & marketing pages",
-    link: "#",
+      "crea tareas, almacenalas, modificalas, terminalas y eliminalas todo eso en una app.",
+    link: "https://create-task-com.vercel.app/",
     github: "https://github.com/cesar097/create-task",
     image: "./img/444.png",
     tags: [TAGS.HTML, TAGS.REACT, TAGS.CSS],
@@ -77,8 +78,8 @@ const PROJECTS = [
   {
     title: "Rick and Morty API",
     description:
-      "get acces to over 20* pages including a dashboard layout, charts, kanban board, calendar, and pro-order E-comerce & marketing pages",
-    link: "#",
+      "listado de todos los personajes de Rick and Morty con buscador incorporado, hecho con html css y javascript.",
+    link: "https://rick-and-morty-api-com.vercel.app/",
     github: "https://github.com/cesar097/RickAndMortyApi",
     image: "./img/rickandmorty.jpg",
     tags: [TAGS.JAVASCRIPT, TAGS.CSS, TAGS.HTML],
@@ -87,8 +88,8 @@ const PROJECTS = [
   {
     title: "POKEDEX",
     description:
-      "get acces to over 20* pages including a dashboard layout, charts, kanban board, calendar, and pro-order E-comerce & marketing pages",
-    link: "https://www.youtube.com/watch?v=QfhqUgC2nM0&list=RDMMpuvBJ8tm58I&index=15",
+      "Pokedex de la primera generacion de pokemos, puedes buscarlo por su nombre o numero de id.",
+    link: "https://pokedexpro-com.vercel.app/",
     github: "https://github.com/cesar097/pokedexPro",
     image: "./img/pokedex.png",
     tags: [TAGS.JAVASCRIPT, TAGS.CSS, TAGS.HTML],
@@ -105,9 +106,15 @@ PROJECTS.map(({ title, description, link, github, image, tags }) => (
       <div class="p-2 ">
         <span class="flex justify-between items-center hover:text-[#64ffda]">
           <h3 class="text-2xl font-bold text-title mb-2 mt-2">{title}</h3>
+
+          <div class="flex space-x-2 justify-center items-center">
+          <a href={link} target="_blank" rel="noopener noreferrer">
+            <VisualIcon class="size-8 cursor-pointer" />
+          </a>          
           <a href={github} target="_blank" rel="noopener noreferrer">
             <Githubicon class="size-6 cursor-pointer" />
           </a>
+        </div>
         </span>
 
         <p class="text-gray-300 mb-4">{description}</p>
