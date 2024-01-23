@@ -23,9 +23,17 @@ import TravelIcon from "./icon/TravelIcon.astro";
 <div
   class="max-w-3xl mx-auto grid md:grid-cols-2 md:items-center md:gap-4 gap-8 items-center justify-center"
 >
-  <div class="order-2">
-    <h2 class="text-3xl font-bold mb-6">¿Quien soy?</h2>
-    <p class="text-lg mb-4 text-pretty p-6 opacity-80">
+
+<img
+class="cardStyle size-[230px] md:mt-[-10px] transition-all duration-300 rounded-lg cursor-pointer 
+filter grayscale hover:grayscale-0 lg:order-2 md:order-1 md:right-4 sm:mx-auto sm:text-center"
+src="https://i.ibb.co/tp1jFS3/image.png"
+alt="me"
+/>
+
+  <div class="md:order-2 lg:order-1">
+    <h2 class="text-3xl font-bold mb-6 text-white">¿Quien soy?</h2>
+    <p class="text-lg mb-4 text-pretty p-6 opacity-80 text-white">
       ¡Hola! Soy Cesar Ospino Agamez, un apasionado desarrollador frontend con
       experiencia en diversas tecnologías. Me enfoco en crear soluciones
       creativas y funcionales desde cero. Amante del deporte, siempre busco
@@ -35,15 +43,10 @@ import TravelIcon from "./icon/TravelIcon.astro";
     </p>
   </div>
 
-  <div class="flex items-center justify-center">
-    <img
-      class="cardStyle size-[230px] md:mt-[-10px] transition-all duration-300 rounded-lg cursor-pointer 
-      filter grayscale hover:grayscale-0 order-1 md:order-1 md:right-4 sm:mx-auto sm:text-center"
-      src="https://i.ibb.co/tp1jFS3/image.png"
-      alt="me"
-    />
+  
+   
   </div>
-</div>
+
 
 <div class="flex flex-col lg:items-start sm:items-center mt-4">
   <h2 class="flex text-2xl text-[#64ffda] gap-x-2">
@@ -105,7 +108,7 @@ import TravelIcon from "./icon/TravelIcon.astro";
   </h2>
 </div>
 
-<div class="m-8 flex items-center justify-center">
+<div class="m-8 flex items-center justify-center text-white">
   <ul
     class="grid lg:grid-cols-3 sm:grid-cols-2 gap-4 sm:gap-2 lg:gap-8 opacity-80"
   >
